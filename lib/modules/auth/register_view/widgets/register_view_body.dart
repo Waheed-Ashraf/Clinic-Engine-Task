@@ -1,6 +1,5 @@
 import 'package:clinic_engine_task/core/utils/app_styles.dart';
 import 'package:clinic_engine_task/core/utils/constent_colors.dart';
-import 'package:clinic_engine_task/modules/auth/register_view/widgets/check_box_widget.dart';
 import 'package:clinic_engine_task/modules/auth/register_view/widgets/register_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

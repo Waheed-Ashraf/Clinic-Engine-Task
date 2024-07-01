@@ -1,8 +1,14 @@
 import 'package:clinic_engine_task/core/utils/constent_colors.dart';
 import 'package:clinic_engine_task/modules/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: primaryColor,
+    ),
+  );
   runApp(const MyApp());
 }
 

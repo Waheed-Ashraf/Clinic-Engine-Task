@@ -1,12 +1,17 @@
+import 'package:clinic_engine_task/modules/home/presentation/views/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+  final void Function()? onDrowerTaped;
+
+  const HomeView({super.key, this.onDrowerTaped});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("Home "),
+    return Column(
+      children: [
+        CustomAppBar(onDrowerTaped: onDrowerTaped),
+      ],
     );
   }
 }
