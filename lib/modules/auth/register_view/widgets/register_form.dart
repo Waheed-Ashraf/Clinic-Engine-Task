@@ -1,30 +1,21 @@
-// ignore_for_file: unused_local_variable, must_be_immutable
-
 import 'package:clinic_engine_task/core/widgets/custom_button.dart';
 import 'package:clinic_engine_task/core/widgets/custom_text_field.dart';
 import 'package:clinic_engine_task/modules/auth/register_view/widgets/check_box_widget.dart';
-import 'package:clinic_engine_task/modules/bottom_nav_bar/bottom_nav_bar.dart';
+import 'package:clinic_engine_task/modules/auth/register_view/widgets/register_view2.dart';
 import 'package:flutter/material.dart';
 
 class RegisterForm extends StatefulWidget {
-  RegisterForm({
+  const RegisterForm({
     super.key,
-    this.fullName,
-    this.email,
-    // this.password,
-    // this.confirmPassword,
   });
-
-  String? email;
-  String? fullName;
-  // String? password;
-  // String? confirmPassword;
 
   @override
   State<RegisterForm> createState() => _RegisterFormState();
 }
 
 class _RegisterFormState extends State<RegisterForm> {
+  String? email;
+  String? fullName;
   GlobalKey<FormState> formKey = GlobalKey();
 
   @override
@@ -38,7 +29,7 @@ class _RegisterFormState extends State<RegisterForm> {
           CustomTextField(
             text: "Enter first name",
             onChanged: (data) {
-              widget.fullName = data;
+              fullName = data;
             },
             validator: (value) {
               if (value!.isEmpty) {
@@ -51,7 +42,7 @@ class _RegisterFormState extends State<RegisterForm> {
           CustomTextField(
             text: "Enter another name",
             onChanged: (data) {
-              widget.fullName = data;
+              fullName = data;
             },
             validator: (value) {
               if (value!.isEmpty) {
@@ -61,11 +52,10 @@ class _RegisterFormState extends State<RegisterForm> {
             },
           ),
           const SizedBox(height: 8),
-
           CustomTextField(
             text: "Enter your email address",
             onChanged: (data) {
-              widget.email = data;
+              email = data;
             },
             validator: (value) {
               if (value!.isEmpty) {
@@ -79,37 +69,9 @@ class _RegisterFormState extends State<RegisterForm> {
               return null;
             },
           ),
-          // const SizedBox(height: 8),
-          // CustomTextField(
-          //   text: "كلمة السر",
-          //   isPassword: true,
-          //   onChanged: (data) {
-          //     widget.password = data;
-          //   },
-          //   validator: (value) {
-          //     if (value!.isEmpty) {
-          //       return 'أدخل كلمة مرور مناسبة';
-          //     }
-          //     return null;
-          //   },
-          // ),
-          // const SizedBox(height: 8),
-          // CustomTextField(
-          //   text: "أعد إدخال كلمة السر",
-          //   isPassword: true,
-          //   onChanged: (data) {
-          //     widget.confirmPassword = data;
-          //   },
-          //   validator: (value) {
-          //     if (value != widget.password) {
-          //       return 'كلمة المرور غير متطابقة';
-          //     }
-          //     return null;
-          //   },
-          // ),
           const CheckboxWidget(),
           const SizedBox(
-            height: 50,
+            height: 16,
           ),
           SizedBox(
             height: 40,
@@ -118,9 +80,9 @@ class _RegisterFormState extends State<RegisterForm> {
                 text: 'Continue',
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
-                    Navigator.pushReplacement(context,
+                    Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return const BottomBarScreen();
+                      return const RegisterView2();
                     }));
                   }
                 }),
