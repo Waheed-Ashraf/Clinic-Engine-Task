@@ -1,5 +1,5 @@
 import 'package:clinic_engine_task/core/utils/constent_colors.dart';
-import 'package:clinic_engine_task/modules/splash/presentation/View/splash_view.dart';
+import 'package:clinic_engine_task/modules/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
         useMaterial3: true,
       ),
-      home: const SplashView(),
+      home: const BottomBarScreen(),
     );
   }
 }

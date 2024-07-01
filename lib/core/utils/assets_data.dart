@@ -12,10 +12,10 @@ class AssetsData {
   static String icon5 = 'assets/images/wallet_account.svg';
 
   static String profileImage = 'assets/images/profileImage.png';
-  static String appointment = 'assets/images/profileImage.png';
-  static String medicalFile = 'assets/images/profileImage.png';
-  static String askYourDoctor = 'assets/images/profileImage.png';
-  static String customerService = 'assets/images/profileImage.png';
-  static String accountSettings = 'assets/images/profileImage.png';
-  static String services = 'assets/images/profileImage.png';
+  static String appointment = 'assets/images/appointment.png';
+  static String medicalFile = 'assets/images/medical-report.png';
+  static String askYourDoctor = 'assets/images/brain.png';
+  static String customerService = 'assets/images/customer-service.png';
+  static String accountSettings = 'assets/images/settings.png';
+  static String services = 'assets/images/services.png';
 }
