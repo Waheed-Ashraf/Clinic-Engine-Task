@@ -18,4 +18,7 @@ class AssetsData {
   static String customerService = 'assets/images/customer-service.png';
   static String accountSettings = 'assets/images/settings.png';
   static String services = 'assets/images/services.png';
+  static String stethoscope = 'assets/images/stethoscope.png';
+  static String ultrasound = 'assets/images/ultrasound.png';
+  static String chemotherapy = 'assets/images/chemotherapy.png';
 }

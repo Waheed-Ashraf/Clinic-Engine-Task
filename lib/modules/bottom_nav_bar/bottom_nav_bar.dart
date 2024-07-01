@@ -80,7 +80,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
               ),
               BottomNavigationBarItem(
                 icon: Icon(
-                  FontAwesomeIcons.businessTime,
+                  FontAwesomeIcons.briefcase,
                   size: 22,
                 ),
                 label: 'Category',
@@ -120,7 +120,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
           // tooltip: 'Explore',
           elevation: 0,
           child: const Icon(
-            FontAwesomeIcons.paw,
+            FontAwesomeIcons.stethoscope,
             size: 22,
             color: Colors.white,
           ),
