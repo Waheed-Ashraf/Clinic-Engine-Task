@@ -1,3 +1,4 @@
+import 'package:clinic_engine_task/modules/stay_healthy/presentation/views/widgets/stay_healhty_appbar.dart';
 import 'package:flutter/material.dart';
 
 class StayHealthyView extends StatelessWidget {
@@ -5,8 +6,10 @@ class StayHealthyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("Stay healthy view"),
+    return const Scaffold(
+      body: Column(
+        children: [CustomStayHealthyAppBar()],
+      ),
     );
   }
 }

@@ -10,6 +10,7 @@ class AssetsData {
   static String icon3 = 'assets/images/settings.svg';
   static String icon4 = 'assets/images/statistics.svg';
   static String icon5 = 'assets/images/wallet_account.svg';
+  static String searchIcon = 'assets/images/search-normal.svg';
 
   static String profileImage = 'assets/images/profileImage.png';
   static String appointment = 'assets/images/appointment.png';
