@@ -22,11 +22,15 @@ class UserListTile extends StatelessWidget {
             backgroundImage: AssetImage(usersModel.image),
           ),
         ),
-        title: Text(
-          usersModel.title,
-          style: AppStyles.styleBold12,
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            usersModel.title,
+            style: AppStyles.styleBold12,
+          ),
         ),
         subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
           child: Text(
             usersModel.subTitle,
             style: AppStyles.styleRegular12,
