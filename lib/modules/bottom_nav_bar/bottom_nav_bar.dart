@@ -3,7 +3,6 @@ import 'package:clinic_engine_task/modules/account/presentation/views/account_vi
 import 'package:clinic_engine_task/modules/ask_your_doctor/presentation/views/ask_your_doctor_view.dart';
 import 'package:clinic_engine_task/modules/categories/presentation/views/categories_view.dart';
 import 'package:clinic_engine_task/modules/home/presentation/views/home_view.dart';
-import 'package:clinic_engine_task/modules/home/presentation/views/widgets/custom_drower.dart';
 import 'package:clinic_engine_task/modules/stay_healthy/presentation/views/stay_healthy_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -16,18 +15,13 @@ class BottomBarScreen extends StatefulWidget {
 }
 
 class _BottomBarScreenState extends State<BottomBarScreen> {
-  List _pages = [];
+  List<Widget> _pages = [];
   int _selectedPageIndex = 0;
-  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
   @override
   void initState() {
-    _pages = [
-      HomeView(
-        onDrowerTaped: () {
-          scaffoldKey.currentState!.openDrawer();
-        },
-      ),
+    _pages = const [
+      HomeView(),
       CategoriesView(),
       StayHealthyView(),
       AskYourDoctorView(),
@@ -45,8 +39,6 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const CustomDrower(),
-      key: scaffoldKey,
       extendBody: true,
       bottomNavigationBar: Theme(
         data: ThemeData(

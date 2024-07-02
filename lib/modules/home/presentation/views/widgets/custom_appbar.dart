@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget {
           ),
           Row(
             children: [
-              const NotificationBill(),
+              const Hero(tag: 'billl', child: NotificationBill()),
               const Spacer(),
               InkWell(
                   onTap: onDrowerTaped,

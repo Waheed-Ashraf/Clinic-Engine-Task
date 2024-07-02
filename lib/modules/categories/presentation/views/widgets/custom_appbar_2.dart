@@ -26,7 +26,7 @@ class CustomAppBar2 extends StatelessWidget {
                 color: Colors.white,
               ),
               Spacer(),
-              NotificationBill(),
+              Hero(tag: 'bill', child: NotificationBill()),
             ],
           ),
           const SizedBox(

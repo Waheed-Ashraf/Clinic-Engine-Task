@@ -8,40 +8,44 @@ class CategoriesView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const CustomAppBar2(
-          title: "Category",
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            const CustomAppBar2(
+              title: "Category",
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: Column(
+                children: [
+                  CustomListTileWidget(
+                    listTileLeadingIcon: AssetsData.stethoscope,
+                    listTileTitle: "Examination",
+                  ),
+                  const Divider(
+                    height: .5,
+                  ),
+                  CustomListTileWidget(
+                    listTileLeadingIcon: AssetsData.ultrasound,
+                    listTileTitle: "Ultrasound",
+                  ),
+                  const Divider(
+                    height: .5,
+                  ),
+                  CustomListTileWidget(
+                    listTileLeadingIcon: AssetsData.chemotherapy,
+                    listTileTitle: "Chemotherapy",
+                  ),
+                  const Divider(
+                    height: .5,
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: Column(
-            children: [
-              CustomListTileWidget(
-                listTileLeadingIcon: AssetsData.stethoscope,
-                listTileTitle: "Examination",
-              ),
-              const Divider(
-                height: .5,
-              ),
-              CustomListTileWidget(
-                listTileLeadingIcon: AssetsData.ultrasound,
-                listTileTitle: "Ultrasound",
-              ),
-              const Divider(
-                height: .5,
-              ),
-              CustomListTileWidget(
-                listTileLeadingIcon: AssetsData.chemotherapy,
-                listTileTitle: "Chemotherapy",
-              ),
-              const Divider(
-                height: .5,
-              ),
-            ],
-          ),
-        ),
-      ],
+      ),
     );
   }
 }
