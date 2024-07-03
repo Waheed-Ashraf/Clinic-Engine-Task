@@ -12,35 +12,38 @@ class CustomDrower extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(topRight: Radius.circular(8))),
-      width: MediaQuery.of(context).size.width * .6,
-      child: Stack(children: [
-        CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 32.0),
-                child: UserListTile(
-                  usersModel: UsersModel(
-                      image: AssetsData.profileImage,
-                      title: "Waheed Ashraf",
-                      subTitle: "washraf124@gmail.com"),
+    return Padding(
+      padding: const EdgeInsets.only(top: 24),
+      child: Container(
+        decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(topRight: Radius.circular(8))),
+        width: MediaQuery.of(context).size.width * .6,
+        child: Stack(children: [
+          CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 16),
+                  child: UserListTile(
+                    usersModel: UsersModel(
+                        image: AssetsData.profileImage,
+                        title: "Waheed Ashraf",
+                        subTitle: "washraf124@gmail.com"),
+                  ),
                 ),
               ),
-            ),
-            const DrowerList(),
-          ],
-        ),
-        Positioned(
-            bottom: 0,
-            left: 0,
-            child: Container(
-              width: MediaQuery.of(context).size.width * .6,
-              color: Colors.white,
-              child: Center(
+              const DrowerList(),
+              const SliverPadding(padding: EdgeInsets.only(bottom: 90))
+            ],
+          ),
+          Positioned(
+              bottom: 80,
+              left: 0,
+              child: Container(
+                width: MediaQuery.of(context).size.width * .6,
+                height: 70,
+                color: Colors.white,
                 child: ListTile(
                   leading: SvgPicture.asset(
                     AssetsData.logoutIcon,
@@ -50,9 +53,9 @@ class CustomDrower extends StatelessWidget {
                   title: Text("Logout account",
                       style: AppStyles.styleRegular12.copyWith()),
                 ),
-              ),
-            )),
-      ]),
+              )),
+        ]),
+      ),
     );
   }
 }

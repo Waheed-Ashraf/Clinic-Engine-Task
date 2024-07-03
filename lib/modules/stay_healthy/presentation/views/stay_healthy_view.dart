@@ -54,7 +54,7 @@ class _StayHealthyViewState extends State<StayHealthyView> {
                 child: DoctorCart(),
               ),
               const SizedBox(
-                height: 48,
+                height: 130,
               ),
             ],
           ),

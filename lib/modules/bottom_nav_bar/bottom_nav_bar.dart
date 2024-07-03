@@ -120,7 +120,18 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
           }),
         ),
       ),
-      body: SafeArea(child: _pages[_selectedPageIndex]),
+      body: Stack(
+        children: [
+          _pages[_selectedPageIndex],
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: 70, // Height of the BottomNavigationBar
+              color: Colors.transparent,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

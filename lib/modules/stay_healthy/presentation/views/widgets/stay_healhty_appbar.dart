@@ -15,14 +15,14 @@ class CustomStayHealthyAppBar extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.only(bottom: 25),
         child: Container(
-          height: 132,
+          height: 164,
           color: primaryColor,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               const SizedBox(
-                height: 16,
+                height: 43,
               ),
               Row(
                 children: [
@@ -67,7 +67,7 @@ class CustomStayHealthyAppBar extends StatelessWidget {
               child: CustomSearchTextField(
                   text: "Search by specialty and doctor's name"),
             ),
-          ))
+          )),
     ]);
   }
 }

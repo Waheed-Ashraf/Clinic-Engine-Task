@@ -8,17 +8,15 @@ class NotificationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              CustomAppBar2(
-                title: "Notifications",
-                onTap: () {},
-              ),
-              const NotificationsList(),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CustomAppBar2(
+              title: "Notifications",
+              onTap: () {},
+            ),
+            const NotificationsList(),
+          ],
         ),
       ),
     );

@@ -38,7 +38,7 @@ class AskYourDoctorView extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 35,
+            height: 130,
           ),
         ],
       ),
