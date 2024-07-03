@@ -1,6 +1,7 @@
 import 'package:clinic_engine_task/core/widgets/custom_button.dart';
 import 'package:clinic_engine_task/modules/ask_your_doctor/presentation/views/widgets/custom_ask_your_doctor_tabbar.dart';
 import 'package:clinic_engine_task/modules/categories/presentation/views/widgets/custom_appbar_2.dart';
+import 'package:clinic_engine_task/modules/home/presentation/views/notifications_view.dart';
 import 'package:flutter/material.dart';
 
 class AskYourDoctorView extends StatelessWidget {
@@ -11,7 +12,13 @@ class AskYourDoctorView extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const CustomAppBar2(title: "Ask Your doctor"),
+          CustomAppBar2(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const NotificationView();
+                }));
+              },
+              title: "Ask Your doctor"),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: CustomAskYourDoctorTabBar(),

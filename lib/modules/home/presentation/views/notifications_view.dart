@@ -1,4 +1,5 @@
 import 'package:clinic_engine_task/modules/categories/presentation/views/widgets/custom_appbar_2.dart';
+import 'package:clinic_engine_task/modules/home/presentation/views/widgets/notification_list.dart';
 import 'package:flutter/material.dart';
 
 class NotificationView extends StatelessWidget {
@@ -6,10 +7,20 @@ class NotificationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        CustomAppBar2(title: "Notifications"),
-      ],
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              CustomAppBar2(
+                title: "Notifications",
+                onTap: () {},
+              ),
+              const NotificationsList(),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -3,11 +3,10 @@ class NotificationModel {
   final String subTitle;
   final String date;
   final String pic;
-  final bool isOpend;
-  NotificationModel(
-      {required this.title,
-      required this.subTitle,
-      required this.date,
-      required this.pic,
-      required this.isOpend});
+  NotificationModel({
+    required this.title,
+    required this.subTitle,
+    required this.date,
+    required this.pic,
+  });
 }

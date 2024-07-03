@@ -1,6 +1,7 @@
 import 'package:clinic_engine_task/modules/account/presentation/views/widgets/account_avatar.dart';
 import 'package:clinic_engine_task/modules/account/presentation/views/widgets/custom_account_listtile.dart';
 import 'package:clinic_engine_task/modules/categories/presentation/views/widgets/custom_appbar_2.dart';
+import 'package:clinic_engine_task/modules/home/presentation/views/notifications_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -9,44 +10,49 @@ class AccountView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         children: [
           CustomAppBar2(
             title: "Account",
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const NotificationView();
+              }));
+            },
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
-          AccountAvatar(),
-          SizedBox(
+          const AccountAvatar(),
+          const SizedBox(
             height: 8,
           ),
-          CustomAccountListTile(
+          const CustomAccountListTile(
               listTileTitle: "Personal file",
               listTileLeadingIcon: FontAwesomeIcons.user),
-          Divider(
+          const Divider(
             height: .5,
           ),
-          CustomAccountListTile(
+          const CustomAccountListTile(
               listTileTitle: "Settings",
               listTileLeadingIcon: FontAwesomeIcons.gear),
-          Divider(
+          const Divider(
             height: .5,
           ),
-          CustomAccountListTile(
+          const CustomAccountListTile(
               listTileTitle: "Help",
               listTileLeadingIcon: FontAwesomeIcons.circleExclamation),
-          Divider(
+          const Divider(
             height: .5,
           ),
-          CustomAccountListTile(
+          const CustomAccountListTile(
               listTileTitle: "Privacy Policy",
               listTileLeadingIcon: FontAwesomeIcons.lock),
-          Divider(
+          const Divider(
             height: .5,
           ),
-          CustomAccountListTile(
+          const CustomAccountListTile(
               listTileTitle: "Sign out",
               listTileLeadingIcon: FontAwesomeIcons.circleArrowLeft),
         ],

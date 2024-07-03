@@ -1,6 +1,7 @@
 import 'package:clinic_engine_task/core/utils/assets_data.dart';
 import 'package:clinic_engine_task/modules/categories/presentation/views/widgets/custom_appbar_2.dart';
 import 'package:clinic_engine_task/modules/categories/presentation/views/widgets/custom_list_tile_widget.dart';
+import 'package:clinic_engine_task/modules/home/presentation/views/notifications_view.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesView extends StatelessWidget {
@@ -11,7 +12,12 @@ class CategoriesView extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const CustomAppBar2(
+          CustomAppBar2(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const NotificationView();
+              }));
+            },
             title: "Category",
           ),
           Padding(

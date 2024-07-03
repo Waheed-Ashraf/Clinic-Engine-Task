@@ -1,11 +1,15 @@
 import 'package:clinic_engine_task/core/utils/app_styles.dart';
 import 'package:clinic_engine_task/core/utils/constent_colors.dart';
+import 'package:clinic_engine_task/modules/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:clinic_engine_task/modules/home/presentation/views/widgets/notification_bill.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class CustomAppBar2 extends StatelessWidget {
   final String title;
-  const CustomAppBar2({super.key, required this.title});
+  final Function() onTap;
+  const CustomAppBar2({super.key, required this.title, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +22,23 @@ class CustomAppBar2 extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          const Row(
+          Row(
             children: [
-              Icon(
-                Icons.arrow_circle_left_outlined,
-                size: 28,
-                color: Colors.white,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) {
+                    return const BottomBarScreen();
+                  }));
+                },
+                child: const Icon(
+                  Icons.arrow_circle_left_outlined,
+                  size: 28,
+                  color: Colors.white,
+                ),
               ),
-              Spacer(),
-              Hero(tag: 'bill', child: NotificationBill2()),
+              const Spacer(),
+              GestureDetector(onTap: onTap, child: const NotificationBill2()),
             ],
           ),
           const SizedBox(
