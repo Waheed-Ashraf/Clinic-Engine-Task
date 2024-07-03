@@ -29,11 +29,11 @@ To run this application locally, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone [Your Repository URL]
+    git clone https://github.com/Waheed-Ashraf/Clinic-Engine-Task
     ```
 2. **Navigate to the project directory**:
     ```bash
-    cd [Your Project Directory]
+    cd Clinic-Engine-Task
     ```
 3. **Get the required dependencies**:
     ```bash
