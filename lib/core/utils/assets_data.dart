@@ -22,4 +22,5 @@ class AssetsData {
   static String stethoscope = 'assets/images/stethoscope.png';
   static String ultrasound = 'assets/images/ultrasound.png';
   static String chemotherapy = 'assets/images/chemotherapy.png';
+  static String doctorPic = 'assets/images/doctor_pic.jpg';
 }

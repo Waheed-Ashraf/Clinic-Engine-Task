@@ -47,7 +47,6 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
         ),
         child: BottomAppBar(
           padding: EdgeInsets.zero,
-          // height: kBottomNavigationBarHeight * 1.2,
           color: Colors.white,
           shape: const CircularNotchedRectangle(),
           notchMargin: 0.8,

@@ -20,19 +20,21 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       drawer: const CustomDrower(),
       key: scaffoldKey,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            CustomAppBar(
-              onDrowerTaped: () {
-                scaffoldKey.currentState!.openDrawer();
-              },
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            const HomeElementsList(),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              CustomAppBar(
+                onDrowerTaped: () {
+                  scaffoldKey.currentState!.openDrawer();
+                },
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              const HomeElementsList(),
+            ],
+          ),
         ),
       ),
     );
