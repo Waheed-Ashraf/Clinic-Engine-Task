@@ -1,6 +1,6 @@
 # Job Application Test App
 
-![App Screenshot](assets\images\Clinic Engine task .png)
+![App Screenshot](assets\images\ClinicEnginetask.png)
 
 ## Overview
 
