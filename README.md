@@ -55,4 +55,5 @@ You can download the APK for the application from the following link:
 For any questions or further information, feel free to reach out:
 
 - **Email**: [washraf124@gmail.com]
-- **LinkedIn**: [https://www.linkedin.com/in/waheed-ashraf-18a197214/]
+- **LinkedIn**: [Waheed Ashraf](https://www.linkedin.com/in/waheed-ashraf-18a197214/)
+
